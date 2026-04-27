@@ -145,7 +145,7 @@ export default function App() {
                 {item}
               </a>
             ))}
-            <a href="#reserve" className="bg-gradient-to-r from-gold to-saffron text-black font-bold px-5 py-2 rounded-sm gold-glow">
+            <a href="https://www.zomato.com/" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-gold to-saffron text-black font-bold px-5 py-2 rounded-sm gold-glow">
               Order Online
             </a>
           </div>
@@ -172,6 +172,14 @@ export default function App() {
                 {item}
               </a>
             ))}
+            <a 
+              href="https://www.zomato.com/"
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-gold hover:text-white text-lg font-display tracking-widest uppercase mt-4 border-t border-gold/20 pt-4"
+            >
+              Order Online
+            </a>
           </motion.div>
         )}
       </nav>
@@ -216,9 +224,9 @@ export default function App() {
           
           <Reveal delay={0.6}>
             <div className="pt-8 flex flex-col md:flex-row items-center justify-center gap-6">
-              <button className="px-8 py-4 bg-transparent border-2 border-gold text-gold font-bold text-sm tracking-widest hover:bg-gold hover:text-black transition-all shadow-[0_0_20px_rgba(212,175,55,0.1)]">
+              <a href="tel:+917030577001" className="px-8 py-4 bg-transparent border-2 border-gold text-gold font-bold text-sm tracking-widest hover:bg-gold hover:text-black transition-all shadow-[0_0_20px_rgba(212,175,55,0.1)] inline-block">
                 RESERVE A TABLE
-              </button>
+              </a>
               <div className="text-xs opacity-60 font-mono text-center md:text-left">
                 Open until 11:00 PM<br/>Yawal Road, Bhusawal
               </div>
@@ -384,20 +392,27 @@ export default function App() {
                 </div>
 
                 <div className="pt-4">
-                  <button className="px-8 py-3 bg-gradient-to-r from-gold to-saffron text-black font-bold text-sm tracking-widest hover:scale-105 transition-transform shadow-[0_0_15px_rgba(212,175,55,0.4)] flex items-center justify-center gap-2 group w-full md:w-auto rounded-sm">
+                  <a href="tel:+917030577001" className="px-8 py-3 bg-gradient-to-r from-gold to-saffron text-black font-bold text-sm tracking-widest hover:scale-105 transition-transform shadow-[0_0_15px_rgba(212,175,55,0.4)] flex items-center justify-center gap-2 group w-full md:w-auto rounded-sm">
                     CALL TO RESERVE
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </button>
+                  </a>
                 </div>
               </div>
             </Reveal>
 
-            <Reveal delay={0.2} className="h-full min-h-[250px]">
-              {/* Map Placeholder styled elegantly */}
-              <div className="w-full h-full rounded-xl bg-black/40 border border-white/10 p-2 flex flex-col items-center justify-center text-ivy/40 overflow-hidden relative group">
-                <MapPin className="w-10 h-10 mb-3 text-gold/50 group-hover:text-gold transition-colors" />
-                <span className="font-bold text-xs tracking-widest uppercase">Map View Unavailable</span>
-                <span className="text-[10px] mt-2 font-mono">Bhusawal, Near Tapi Steel</span>
+            <Reveal delay={0.2} className="h-full min-h-[300px]">
+              {/* Map Embed */}
+              <div className="w-full h-full min-h-[300px] rounded-xl overflow-hidden border border-gold/40 shadow-2xl relative group bg-black/40">
+                <iframe 
+                  src="https://maps.google.com/maps?q=Mantra%20The%20Food%20Studio%2C%20Bhusawal&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                  width="100%" 
+                  height="100%" 
+                  style={{ border: 0, position: 'absolute', inset: 0 }} 
+                  allowFullScreen 
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Mantra The Food Studio Location"
+                ></iframe>
               </div>
             </Reveal>
           </div>
